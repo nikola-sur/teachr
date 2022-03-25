@@ -6,7 +6,8 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-Teach reproducible data science by setting a good example
+Teach reproducible data science by making your course material
+reproducible
 
 ## Installation
 
