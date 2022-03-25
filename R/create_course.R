@@ -1,0 +1,14 @@
+#' Create a new course
+#'
+#' Creates a new GitHub organization for a course along with several repositories in the GitHub organization.
+#'
+#' @param name Course title as a character string. Example: 'DSCI 100 - Introduction to Data Science'
+#' @param organization Name of the organization as a character string with no spaces.
+#' This name must be available on GitHub, otherwise an error will be returned.
+#' Example: 'dsci-100-2022'
+#'
+#' @return
+#' @export
+create_course <- function(name, organization) {
+  return(0)
+}

@@ -2,8 +2,7 @@
 % Please edit documentation in R/link_canvas.R
 \name{link_canvas}
 \alias{link_canvas}
-\title{Link to a Canvas course
-Establish a connection with the Canvas Instructure LMS API. Doing so allows for automatic updates to the Canvas course. This only needs to be performed once.}
+\title{Link to a Canvas course}
 \usage{
 link_canvas(token, course_id)
 }
@@ -16,6 +15,5 @@ link_canvas(token, course_id)
 
 }
 \description{
-Link to a Canvas course
 Establish a connection with the Canvas Instructure LMS API. Doing so allows for automatic updates to the Canvas course. This only needs to be performed once.
 }
