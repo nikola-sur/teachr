@@ -15,9 +15,6 @@ are titled as 'Assignment (number)'}
 \item{week}{Week/module number for the assignment. The assignment is then
 automatically placed in the correct location on the course website.}
 }
-\value{
-
-}
 \description{
 Creates a new assignment for the course and automatically updates the course website,
 GitHub repositories, and Canvas.

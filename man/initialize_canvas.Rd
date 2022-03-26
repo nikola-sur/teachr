@@ -13,9 +13,6 @@ initialize_canvas(name, organization, path)
 
 \item{path}{See create_course()}
 }
-\value{
-
-}
 \description{
 Internal function. Creates a syllabus and home page for Canvas. Only run this
 function once.

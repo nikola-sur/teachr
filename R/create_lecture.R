@@ -8,7 +8,6 @@
 #' with lectures on M/W/F, each new week would be a new module and day = 1, 2, 3
 #' for M, W, F, respectively.
 #'
-#' @return
 #' @export
 create_lecture <- function(name, day) {
   return(0)

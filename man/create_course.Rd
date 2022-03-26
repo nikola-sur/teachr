@@ -16,9 +16,6 @@ Example: 'dsci-100-2022'}
 \item{path}{Path to the directory where to create the organization. If left
 blank, defaults to the current working directory.}
 }
-\value{
-
-}
 \description{
 Creates a new GitHub organization for a course along with several repositories in the GitHub organization.
 }

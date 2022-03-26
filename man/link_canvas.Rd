@@ -11,9 +11,6 @@ link_canvas(token, course_id)
 
 \item{course_id}{Canvas course number.}
 }
-\value{
-
-}
 \description{
 Establish a connection with the Canvas Instructure LMS API. Doing so allows for automatic updates to the Canvas course. This only needs to be performed once.
 }

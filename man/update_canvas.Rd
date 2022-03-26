@@ -6,9 +6,6 @@
 \usage{
 update_canvas()
 }
-\value{
-
-}
 \description{
 Updates Canvas content by automatically searching through course materials in
 the various repositories.

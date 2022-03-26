@@ -1,0 +1,13 @@
+---
+title: "Assignments"
+description: |
+  Links to the assignments can be found below
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+# Note on group work
+# Grading
+# Assignments

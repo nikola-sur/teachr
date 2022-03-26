@@ -4,17 +4,10 @@
 \alias{initialize_website}
 \title{Initialize website for 'teachr' course}
 \usage{
-initialize_website(name, organization, path)
+initialize_website(name)
 }
 \arguments{
 \item{name}{See create_course()}
-
-\item{organization}{See create_course()}
-
-\item{path}{See create_course()}
-}
-\value{
-
 }
 \description{
 Internal function. Creates the website. Only run this function once.

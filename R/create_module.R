@@ -7,7 +7,6 @@
 #' @param week Module/week number as an integer value. Note that in this package
 #' module number = week number as these are assumed to be the same.
 #'
-#' @return
 #' @export
 create_module <- function(name, week) {
   return(0)

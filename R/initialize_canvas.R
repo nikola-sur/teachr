@@ -6,8 +6,6 @@
 #' @param name See create_course()
 #' @param organization See create_course()
 #' @param path See create_course()
-#'
-#' @return
 initialize_canvas <- function(name, organization, path) {
   return(0)
 }

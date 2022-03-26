@@ -13,9 +13,6 @@ initialize_directories(name, organization, path)
 
 \item{path}{See create_course()}
 }
-\value{
-
-}
 \description{
 Internal function. Creates the appropriate directories at 'path'.
 }

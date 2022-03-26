@@ -12,9 +12,6 @@ create_module(name, week)
 \item{week}{Module/week number as an integer value. Note that in this package
 module number = week number as these are assumed to be the same.}
 }
-\value{
-
-}
 \description{
 Creates a new module for the course and automatically updates the course website,
 GitHub repositories, and Canvas.

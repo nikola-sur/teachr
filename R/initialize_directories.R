@@ -5,8 +5,18 @@
 #' @param name See create_course()
 #' @param organization See create_course()
 #' @param path See create_course()
-#'
-#' @return
 initialize_directories <- function(name, organization, path) {
-  return(0)
+  repos <- c("lectures", "assignments", paste0(organization, ".github.io"))
+  org_path <- paste0(path, "/", organization)
+
+  # Create organization folder
+  dir.create(path = org_path, showWarnings = TRUE)
+  usethis::create_project(path = org_path, open = FALSE)
+
+  # Create repo folders
+  for (repo in repos) {
+    repo_path <- paste0(org_path, "/", repo)
+    dir.create(path = repo_path, showWarnings = TRUE)
+    usethis::create_project(path = repo_path, open = FALSE)
+  }
 }

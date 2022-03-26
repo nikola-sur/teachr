@@ -1,0 +1,16 @@
+---
+title: "Syllabus"
+description: |
+  The course syllabus is provided below
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+# Course objectives and outline
+# Meeting times
+# Grading
+# Assignments
+# Labs
+# Academic honesty policy

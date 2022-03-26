@@ -13,9 +13,6 @@ create_lecture(name, day)
 with lectures on M/W/F, each new week would be a new module and day = 1, 2, 3
 for M, W, F, respectively.}
 }
-\value{
-
-}
 \description{
 Creates a new lecture for the course and automatically updates the course website,
 GitHub repositories, and Canvas.

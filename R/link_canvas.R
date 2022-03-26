@@ -5,7 +5,6 @@
 #' @param token Canvas API token number. Can be obtained in Settings > Approved Integrations > New Access Token.
 #' @param course_id Canvas course number.
 #'
-#' @return
 #' @export
 link_canvas <- function(token, course_id) {
   return(0)

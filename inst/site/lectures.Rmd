@@ -1,0 +1,11 @@
+---
+title: "Lectures"
+description: |
+  Lecture notes and slides are provided below
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+# Lectures

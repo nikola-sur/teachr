@@ -1,0 +1,19 @@
+---
+title: "About the course"
+description: |
+  You can find some more details about the course below
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+# People
+- **Instructor:** Instructor name
+- **Teaching assistant:** TA name
+- **Marker:** Marker name
+
+# Course meeting times
+Lectures will be held on Mondays, Wednesdays, and Fridays from 8:30 - 9:20 am in
+the main lecture hall. Labs are held on Thursdays at 12:30 pm in the computer lab. 
+Check the syllabus for information about office hours.

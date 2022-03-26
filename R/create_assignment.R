@@ -9,7 +9,6 @@
 #' @param week Week/module number for the assignment. The assignment is then
 #' automatically placed in the correct location on the course website.
 #'
-#' @return
 #' @export
 create_assignment <- function(name, number, week) {
   return(0)

@@ -9,10 +9,8 @@
 #' @param path Path to the directory where to create the organization. If left
 #' blank, defaults to the current working directory.
 #'
-#' @return
 #' @export
 create_course <- function(name, organization, path = ".") {
   initialize_directories(name = name, organization = organization, path = path)
-  initialize_website(name = name, organization = organization, path = path)
-  initialize_canvas(name = name, organization = organization, path = path)
 }
+
