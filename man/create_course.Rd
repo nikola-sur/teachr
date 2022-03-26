@@ -4,7 +4,7 @@
 \alias{create_course}
 \title{Create a new course}
 \usage{
-create_course(name, organization)
+create_course(name, organization, path = ".")
 }
 \arguments{
 \item{name}{Course title as a character string. Example: 'DSCI 100 - Introduction to Data Science'}
@@ -12,6 +12,9 @@ create_course(name, organization)
 \item{organization}{Name of the organization as a character string with no spaces.
 This name must be available on GitHub, otherwise an error will be returned.
 Example: 'dsci-100-2022'}
+
+\item{path}{Path to the directory where to create the organization. If left
+blank, defaults to the current working directory.}
 }
 \value{
 
