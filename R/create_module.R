@@ -9,5 +9,7 @@
 #'
 #' @export
 create_module <- function(name, week) {
-  return(0)
+  create_module_lectures(week = week)
+  # create_module_website(name = name, week = week) # Needs to be run in the website repo
+  create_module_canvas(name = name, week = week)
 }

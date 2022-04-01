@@ -7,7 +7,7 @@ initialize_website <- function(name) {
   distill::create_website(dir = getwd(), title = name, gh_pages = TRUE)
 
   # Create pages for website
-  site_path <- system.file("site", package = "teachr")
+  site_path <- get_site_path()
   site_files <- list.files(path = site_path)
   for (file in site_files) {
     file_path <- paste0(site_path, "/", file)

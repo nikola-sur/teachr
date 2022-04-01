@@ -2,6 +2,7 @@
 title: "Lectures"
 description: |
   Lecture notes and slides are provided below
+listing: posts
 ---
 
 ```{r setup, include=FALSE}
