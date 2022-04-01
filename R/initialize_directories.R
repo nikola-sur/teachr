@@ -19,4 +19,8 @@ initialize_directories <- function(name, organization, path) {
     dir.create(path = repo_path, showWarnings = TRUE)
     usethis::create_project(path = repo_path, open = FALSE)
   }
+
+  # Add meta files
+  utils::write.table(organization, file = "meta/organization.txt", row.names = FALSE,
+                     col.names = FALSE)
 }

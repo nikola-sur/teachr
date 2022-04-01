@@ -2,7 +2,7 @@ name: "dsci-123.github.io"
 title: "DSCI 123"
 description: |
   DSCI 123
-output_dir: "_site"
+output_dir: "docs"
 navbar:
   right:
     - text: "Home"

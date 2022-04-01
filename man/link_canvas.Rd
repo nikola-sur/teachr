@@ -4,13 +4,18 @@
 \alias{link_canvas}
 \title{Link to a Canvas course}
 \usage{
-link_canvas(token, course_id)
+link_canvas(token_path, course_id, API_URL)
 }
 \arguments{
-\item{token}{Canvas API token number. Can be obtained in Settings > Approved Integrations > New Access Token.}
+\item{token_path}{Path to where the Canvas API token number is stored. This
+should be stored in a file of type '.txt'. The Canvas token can be obtained in
+Settings > Approved Integrations > New Access Token.}
 
-\item{course_id}{Canvas course number.}
+\item{course_id}{Canvas course number as an integer.}
+
+\item{API_URL}{URL for Canvas API}
 }
 \description{
-Establish a connection with the Canvas Instructure LMS API. Doing so allows for automatic updates to the Canvas course. This only needs to be performed once.
+Establish a connection with the Canvas Instructure LMS API. Doing so allows
+for automatic updates to the Canvas course. This only needs to be performed once.
 }

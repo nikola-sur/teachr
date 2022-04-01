@@ -7,13 +7,16 @@
 #' should be stored in a file of type '.txt'. The Canvas token can be obtained in
 #' Settings > Approved Integrations > New Access Token.
 #' @param course_id Canvas course number as an integer.
+#' @param API_URL URL for Canvas API
 #'
 #' @export
-link_canvas <- function(token_path, course_id) {
+link_canvas <- function(token_path, course_id, API_URL) {
   token <- as.character(utils::read.table(file = token_path))
   if (!dir.exists("meta/")) dir.create("meta/")
   utils::write.table(token_path, file = "meta/token_path.txt", row.names = FALSE,
                      col.names = FALSE)
   utils::write.table(course_id, file = "meta/course_id.txt", row.names = FALSE,
+                     col.names = FALSE)
+  utils::write.table(API_URL, file = "meta/API_URL.txt", row.names = FALSE,
                      col.names = FALSE)
 }
