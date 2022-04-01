@@ -2,5 +2,5 @@
 #'
 #' Internal function. Retrieves the Canvas API URL
 get_API_URL <- function() {
-  return(as.numeric(utils::read.table("meta/API_URL.txt")))
+  return(as.character(utils::read.table("meta/API_URL.txt")))
 }
