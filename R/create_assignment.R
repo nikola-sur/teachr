@@ -10,6 +10,7 @@
 #' automatically placed in the correct location on the course website.
 #'
 #' @export
-create_assignment <- function(name, number, week) {
-  create_assignment_canvas(name = name, number = number, week = week)
+create_assignment <- function(number, week, name = NULL) {
+  if (is.null(name)) name <- paste0("Assignment ", number)
+  create_assignment_canvas(name = name)
 }

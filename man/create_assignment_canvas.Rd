@@ -4,16 +4,10 @@
 \alias{create_assignment_canvas}
 \title{Create a new assignment on Canvas}
 \usage{
-create_assignment_canvas(name, number, week)
+create_assignment_canvas(name)
 }
 \arguments{
-\item{name}{Assignment name as a character string. If left blank, assignments
-are titled as 'Assignment (number)'}
-
-\item{number}{Assignment number as an integer value.}
-
-\item{week}{Week/module number for the assignment. The assignment is then
-automatically placed in the correct location on the course website.}
+\item{name}{Assignment name as a character string.}
 }
 \description{
 Internal function. Creates a new assignment for the course on Canvas.

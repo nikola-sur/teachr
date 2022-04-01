@@ -4,16 +4,16 @@
 \alias{create_assignment}
 \title{Create a new assignment}
 \usage{
-create_assignment(name, number, week)
+create_assignment(number, week, name = NULL)
 }
 \arguments{
-\item{name}{Assignment name as a character string. If left blank, assignments
-are titled as 'Assignment (number)'}
-
 \item{number}{Assignment number as an integer value.}
 
 \item{week}{Week/module number for the assignment. The assignment is then
 automatically placed in the correct location on the course website.}
+
+\item{name}{Assignment name as a character string. If left blank, assignments
+are titled as 'Assignment (number)'}
 }
 \description{
 Creates a new assignment for the course and automatically updates the course website,

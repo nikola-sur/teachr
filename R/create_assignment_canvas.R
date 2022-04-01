@@ -2,17 +2,15 @@
 #'
 #' Internal function. Creates a new assignment for the course on Canvas.
 #'
-#' @param name Assignment name as a character string. If left blank, assignments
-#' are titled as 'Assignment (number)'
-#' @param number Assignment number as an integer value.
-#' @param week Week/module number for the assignment. The assignment is then
-#' automatically placed in the correct location on the course website.
-create_assignment_canvas <- function(name, number, week) {
+#' @param name Assignment name as a character string.
+create_assignment_canvas <- function(name) {
   token <- get_canvas_token()
   course_id <- get_course_id()
   url <- get_API_URL()
+  assignment_url <- paste0(get_site_url(), "/assignments")
 
-  description <- "<p><iframe style=\"overflow: hidden;\" src=\"https://ubc-dsci.github.io/dsci-100-student/\" width=\"800\" height=\"3200\"></iframe></p>"
+
+  description <- paste0("<p><iframe style=\"overflow: hidden;\" src=\"", assignment_url, "\" width=\"600\" height=\"2400\"></iframe></p>")
   py_code <- paste0("from canvasapi import Canvas
 token = '", token, "'
 url = '", url, "'
@@ -20,7 +18,7 @@ connection = Canvas(url, token)
 course = connection.get_course(", course_id, ")
 
 assignment = course.create_assignment({
-  'name': 'Assignment 23',
+  'name': '", name, "',
   'description': '", description, "'
 })
 ")
