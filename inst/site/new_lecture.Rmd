@@ -1,0 +1,55 @@
+---
+  title: "Week 00 Day 00: Topic of the day"
+subtitle: "More information about today's topic"
+output:
+  xaringan::moon_reader:
+  lib_dir: libs
+nature:
+  highlightStyle: github
+highlightLines: true
+countIncrementalSlides: false
+---
+
+
+  ```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+```
+
+
+class: center, middle
+
+# First section
+
+### Some information about this section
+
+---
+
+  # Section 1 information
+
+  More information about this section's slides. Some example code:
+
+```{r eval = TRUE}
+x = runif(100L, 0, 1)
+y = runif(100L, 0, 1)
+```
+
+--
+
+You can let text appear on the slide sequentially.
+
+--
+
+- Bullet point 1
+
+--
+
+- Bullet point 2
+
+---
+
+# Section 2 information
+
+Some more information. From here you should be able to create your own lecture slides!
+
+**Note:** This template is based partly on the original "Ninja Presentation" template
+from the Xaringan package.

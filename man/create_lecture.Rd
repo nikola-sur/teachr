@@ -4,10 +4,12 @@
 \alias{create_lecture}
 \title{Create a new lecture}
 \usage{
-create_lecture(name, day)
+create_lecture(name, week, day)
 }
 \arguments{
 \item{name}{Lecture name as a character string. Example: 'Linear Regression: The Basics'}
+
+\item{week}{Lecture week as an integer value.}
 
 \item{day}{Day/lecture number as an integer value. For example, for courses
 with lectures on M/W/F, each new week would be a new module and day = 1, 2, 3

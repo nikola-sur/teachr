@@ -5,5 +5,7 @@
 #' @param name See create_lecture()
 #' @param day See create_lecture()
 create_lecture_website <- function(name, day) {
-  return(0)
+  # Update post for module
+
+  # Link to slides
 }
