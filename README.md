@@ -49,6 +49,8 @@ and are moderately familiar with:
 
 ## Usage
 
+### First steps
+
 The philosophy of the ‘teachr’ library is that a course should be
 organized as a GitHub organization with separate repositories for course
 lecture slides, assignments, and for the course website. We will
@@ -91,4 +93,29 @@ usethis::use_git()
 usethis::use_github()
 ```
 
-to prepare the folders for use with Git.
+to prepare the folders for use with Git. Then, add these repositories to
+your GitHub organization and name them “lectures”, “assignments”, and
+“dsci-123-sp2022.github.io”. This can be done from GitHub desktop by
+clicking `Add > Add existing repository...`. Make sure that the
+repositories are all listed as public.
+
+From here, we need to obtain a Canvas API token by visiting
+`Account > Settings > Approved Integrations`. Create a new access token
+and note it down in an empty “.txt” file on your computer (but don’t
+store it in your course repository!). Create a new Canvas course if you
+don’t have one for your class already, and note the course ID, which is
+visible in the URL for the course. Then, open the organization
+repository and run
+
+``` r
+teachr::link_canvas(token_path = "../Canvas token.txt", course_id = 1234567,
+                    API_URL = "https://canvas.instructure.com/")
+```
+
+The `token_path` is the location where your Canvas API token is stored,
+relative to the organization repository. The `API_URL` might differ if
+you are using Canvas through your institution. For example, it may look
+like <https://canvas.ubc.ca/>, instead. If you encounter trouble reading
+the token, you might need to add an empty new line in your “.txt” file.
+
+### Main workflow

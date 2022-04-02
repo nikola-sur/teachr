@@ -16,3 +16,4 @@ create_assignment_assignments(name, number, week)
 \description{
 Internal function. Creates a new assignment in the 'assignments' repository.
 }
+\keyword{internal}

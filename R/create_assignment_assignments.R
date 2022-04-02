@@ -5,6 +5,8 @@
 #' @param name See create_assignment()
 #' @param number See create_assignment()
 #' @param week See create_assignment()
+#'
+#' @keywords internal
 create_assignment_assignments <- function(name, number, week) {
   # Create new folders
   dir_name <- paste0("hw-", number)
