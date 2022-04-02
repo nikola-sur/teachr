@@ -156,13 +156,125 @@ organization repository and run</p>
 token is stored, relative to the organization repository. The
 <code>API_URL</code> might differ if you are using Canvas through your
 institution. For example, it may look like <a href="https://canvas.ubc.ca/" class="external-link uri">https://canvas.ubc.ca/</a>,
-instead.</p>
-<p>(You might need to add an empty new line in your “.txt” file with the
-Canvas token.)</p>
+instead. If you encounter trouble reading the token, you might need to
+add an empty new line in your “.txt” file.</p>
+<p>Finally, we head over to the website repository and run</p>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu">teachr</span><span class="fu">::</span><span class="fu"><a href="reference/initialize_website.html">initialize_website</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
+<p>This creates a first version of your course website! To make it
+public, commit and push the changes in the website repository and in
+<code>Settings &gt; Pages</code> on GitHub for the repository, set the
+source to Branch: main, Folder: /docs. A first version of the site
+should now be live!</p>
+<p>Also, because the <code>teachr</code> package uses the R
+<code>reticulate</code> package to run Python code, it might be
+necessary to install the <code>canvasapi</code> package by running</p>
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu">reticulate</span><span class="fu">::</span><span class="fu"><a href="https://rstudio.github.io/reticulate/reference/py_install.html" class="external-link">py_install</a></span><span class="op">(</span>packages <span class="op">=</span> <span class="st">"canvasapi"</span>, pip <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></code></pre></div>
 </div>
 <div class="section level3">
 <h3 id="main-workflow">Main workflow<a class="anchor" aria-label="anchor" href="#main-workflow"></a>
 </h3>
+<p>Having setup the Canvas and GitHub tokens, we are now ready to use
+the <code>teachr</code> package! With <code>teachr</code>, courses are
+designed to follow a certain structure. In particular, course material
+is grouped into <strong>modules</strong> with one module per week.
+Within each module there can be several <strong>lectures</strong>, one
+for each lecture in the day of the week.</p>
+<div class="section level4">
+<h4 id="new-module">New module<a class="anchor" aria-label="anchor" href="#new-module"></a>
+</h4>
+<p>Let’s create our first module by running</p>
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu">teachr</span><span class="fu">::</span><span class="fu"><a href="reference/create_module.html">create_module</a></span><span class="op">(</span>name <span class="op">=</span> <span class="st">"First module"</span>, week <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></code></pre></div>
+<p>This automatically</p>
+<ol style="list-style-type: decimal">
+<li>Creates a new subdirectory in the “lectures” repository called
+“week-1”</li>
+<li>Creates a new module on Canvas</li>
+</ol>
+<p>To create a new module on the course website that is linked with
+Canvas, use</p>
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu">teachr</span><span class="fu">::</span><span class="fu"><a href="reference/create_module_website.html">create_module_website</a></span><span class="op">(</span>name <span class="op">=</span> <span class="st">"First module"</span>, week <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></code></pre></div>
+<p>The new module will now be visible at <a href="https://dsci-123-sp2022.github.io/lectures" class="external-link uri">https://dsci-123-sp2022.github.io/lectures</a>.
+<strong>Note:</strong> Functions ending in <code>_website()</code> must
+be run from the website repository. The course site is built using the R
+<code>distill</code> package and it seems that building the site cannot
+be done outside of the website project. Feel free to let me know if you
+know of a way to do this :)</p>
+</div>
+<div class="section level4">
+<h4 id="new-lecture">New lecture<a class="anchor" aria-label="anchor" href="#new-lecture"></a>
+</h4>
+<p>Next, we create a new lecture for the corresponding module. We do
+this by running in the organization repo</p>
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu">teachr</span><span class="fu">::</span><span class="fu"><a href="reference/create_lecture.html">create_lecture</a></span><span class="op">(</span>name <span class="op">=</span> <span class="st">"Introductory lecture"</span>, week <span class="op">=</span> <span class="fl">1</span>, day <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></code></pre></div>
+<p>Then, from the website repo run</p>
+<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu">teachr</span><span class="fu">::</span><span class="fu"><a href="reference/create_lecture_website.html">create_lecture_website</a></span><span class="op">(</span>name <span class="op">=</span> <span class="st">"Introductory lecture"</span>, week <span class="op">=</span> <span class="fl">1</span>, day <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></code></pre></div>
+<p>This will automatically</p>
+<ol style="list-style-type: decimal">
+<li>Add a new subfolder in the “lectures” repository with templates for
+the course slides using Xaringan (more details below)</li>
+<li>Add appropriate links to the lectures part of the course
+website</li>
+<li>Create a new Canvas page for the lecture with an iframe that links
+to the appropriate lecture link</li>
+</ol>
+<p><a href="https://bookdown.org/yihui/rmarkdown/xaringan.html" class="external-link">Xaringan</a>
+is used for the lecture slides. A small template for a new set of
+lecture slides is included whenever the function
+<code><a href="reference/create_lecture.html">teachr::create_lecture()</a></code> is run. Note that you will need to
+build the slides from the .Rmd file.</p>
+<p>To make the course material publicly available, we need to set up the
+“lectures” and “assignments” repositories as GitHub pages. To do this,
+go to <code>Settings &gt; Pages</code> in each of the repos and use the
+main branch as the source.</p>
+</div>
+<div class="section level4">
+<h4 id="new-assignment">New assignment<a class="anchor" aria-label="anchor" href="#new-assignment"></a>
+</h4>
+<p>Finally, we can create a new assignment using the functions</p>
+<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu">teachr</span><span class="fu">::</span><span class="fu"><a href="reference/create_assignment.html">create_assignment</a></span><span class="op">(</span>number <span class="op">=</span> <span class="fl">1</span>, week <span class="op">=</span> <span class="fl">1</span>, name <span class="op">=</span> <span class="st">"Linear regression"</span><span class="op">)</span></code></pre></div>
+<p>from the organization repo and</p>
+<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu">teachr</span><span class="fu">::</span><span class="fu"><a href="reference/create_assignment_website.html">create_assignment_website</a></span><span class="op">(</span>number <span class="op">=</span> <span class="fl">1</span>, week <span class="op">=</span> <span class="fl">1</span>, name <span class="op">=</span> <span class="st">"Linear regression"</span><span class="op">)</span></code></pre></div>
+<p>in the website repo. If <code>name</code> is left blank, it defaults
+to a naming system of “Assignment (number)”.</p>
+<p>These two functions will</p>
+<ol style="list-style-type: decimal">
+<li>Create a new folder in your “assignments” repo and initialize a .Rmd
+template for the assignment</li>
+<li>Update the course website with new assignment materials in the
+appropriate modules</li>
+<li>Create a new assignment on Canvas that includes an iframe to the
+assignment on the course website</li>
+</ol>
+</div>
+<div class="section level4">
+<h4 id="computational-environments">Computational environments<a class="anchor" aria-label="anchor" href="#computational-environments"></a>
+</h4>
+<p>Because the aim of the <code>teachr</code> package is to teach
+reproducibility, the organization repo is initialized with a
+<code>renv.lock</code> file generated by the R <code>renv</code>
+package. This lock file can be generated in the other R projects
+(“lectures” and “assignments”) by running</p>
+<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu">renv</span><span class="fu">::</span><span class="fu"><a href="https://rstudio.github.io/renv/reference/init.html" class="external-link">init</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
+<p>After installing packages, the instructor can store their list of
+installed packages by running</p>
+<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu">renv</span><span class="fu">::</span><span class="fu"><a href="https://rstudio.github.io/renv/reference/snapshot.html" class="external-link">snapshot</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
+<p>and then sharing their <code>renv.lock</code> file with students.
+Students can then use the</p>
+<div class="sourceCode" id="cb16"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu">renv</span><span class="fu">::</span><span class="fu"><a href="https://rstudio.github.io/renv/reference/restore.html" class="external-link">restore</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
+<p>function to ensure that the same packages are loaded as the
+instructor.</p>
+</div>
 </div>
 </div>
 </div>
