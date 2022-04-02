@@ -18,6 +18,9 @@ This is all achieved while making the course materials reproducible so
 that instructors can teach reproducible data science by setting a good
 example.
 
+Visit the website for this package:
+<https://nikola-sur.github.io/teachr/>
+
 ## Installation
 
 You can install the development version of teachr from
@@ -28,9 +31,7 @@ You can install the development version of teachr from
 devtools::install_github("nikola-sur/teachr")
 ```
 
-## Usage
-
-### Prerequisites
+## Prerequisites
 
 This package assumes that you have the following installed on your
 system:
@@ -46,7 +47,7 @@ and are moderately familiar with:
 -   [GitHub](https://github.com/)
 -   [R Markdown](https://rmarkdown.rstudio.com/)
 
-### First steps
+## Usage
 
 The philosophy of the ‘teachr’ library is that a course should be
 organized as a GitHub organization with separate repositories for course
@@ -68,3 +69,26 @@ library(teachr)
 teachr::create_course(name = "DSCI 123 - Introduction to Data Science (Spring 2022)",
                       organization = "dsci-123-sp2022")
 ```
+
+You should now see a new folder called “dsci-123-sp2022” and three
+subfolders: “lectures”, “assignments”, and “dsci-123-sp2022.github.io”.
+These three folders will contain lecture slides, assignments, and files
+for the course website.
+
+Create a GitHub token by running
+
+``` r
+usethis::gh_token_help()
+usethis::create_github_token()
+```
+
+and complete the GitHub token setup. Then, in each of the three
+subfolders (“lectures”, “assignments”, and “dsci-123-sp2022.github.io”)
+run
+
+``` r
+usethis::use_git()
+usethis::use_github()
+```
+
+to prepare the folders for use with Git.
