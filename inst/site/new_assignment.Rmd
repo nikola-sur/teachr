@@ -1,0 +1,17 @@
+---
+title: "Assignment 1"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Question 1
+Question 1 description.
+
+# Question 2
+Question 2 description.
+
+# Question 3
+Question 3 description.

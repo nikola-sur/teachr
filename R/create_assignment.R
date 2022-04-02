@@ -12,5 +12,6 @@
 #' @export
 create_assignment <- function(number, week, name = NULL) {
   if (is.null(name)) name <- paste0("Assignment ", number)
-  create_assignment_canvas(name = name)
+  create_assignment_assignments(name = name, number = number, week = week)
+  create_assignment_canvas(name = name, number = number, week = week)
 }

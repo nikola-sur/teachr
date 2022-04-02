@@ -2,5 +2,9 @@
 #'
 #' Internal function. Retrieves the Canvas token.
 get_organization <- function() {
-  return(as.character(utils::read.table("meta/organization.txt")))
+  path <- "meta/organization.txt"
+  if (!dir.exists("meta")) {
+    path <- paste0("../", path)
+  }
+  return(as.character(utils::read.table(path)))
 }

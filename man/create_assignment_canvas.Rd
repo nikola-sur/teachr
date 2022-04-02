@@ -4,10 +4,14 @@
 \alias{create_assignment_canvas}
 \title{Create a new assignment on Canvas}
 \usage{
-create_assignment_canvas(name)
+create_assignment_canvas(name, number, week)
 }
 \arguments{
-\item{name}{Assignment name as a character string.}
+\item{name}{See create_assignment()}
+
+\item{number}{See create_assignment()}
+
+\item{week}{See create_assignment()}
 }
 \description{
 Internal function. Creates a new assignment for the course on Canvas.

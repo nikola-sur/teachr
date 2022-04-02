@@ -16,6 +16,7 @@ RoxygenNote: 7.1.2
 Imports: 
     distill,
     pagedown,
+    renv,
     reticulate,
     rmarkdown,
     usethis,

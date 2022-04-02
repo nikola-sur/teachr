@@ -4,13 +4,16 @@
 \alias{create_lecture_website}
 \title{Create a new lecture in the website repository}
 \usage{
-create_lecture_website(name, day)
+create_lecture_website(name, week, day)
 }
 \arguments{
 \item{name}{See create_lecture()}
 
+\item{week}{See create_lecture()}
+
 \item{day}{See create_lecture()}
 }
 \description{
-Internal function. Creates a new lecture in the 'lectures' repository.
+Updates lecture information in the website repository for the corresponding module.
+Needs to be run from the website repository.
 }
