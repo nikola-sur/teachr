@@ -16,3 +16,4 @@ create_lecture_lectures(name, week, day)
 \description{
 Internal function. Creates a new lecture in the 'lectures' repository.
 }
+\keyword{internal}

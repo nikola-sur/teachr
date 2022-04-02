@@ -16,3 +16,4 @@ create_lecture_canvas(name, week, day)
 \description{
 Internal function. Creates a new lecture on Canvas.
 }
+\keyword{internal}

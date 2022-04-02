@@ -16,3 +16,4 @@ initialize_directories(name, organization, path)
 \description{
 Internal function. Creates the appropriate directories at 'path'.
 }
+\keyword{internal}

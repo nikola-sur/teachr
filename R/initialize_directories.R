@@ -5,6 +5,8 @@
 #' @param name See create_course()
 #' @param organization See create_course()
 #' @param path See create_course()
+#'
+#' @keywords internal
 initialize_directories <- function(name, organization, path) {
   repos <- c("lectures", "assignments", paste0(organization, ".github.io"))
   org_path <- paste0(path, "/", organization)

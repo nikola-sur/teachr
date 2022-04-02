@@ -3,6 +3,8 @@
 #' Internal function. Creates the website. Only run this function once.
 #'
 #' @param name See create_course()
+#'
+#' @keywords internal
 initialize_website <- function(name) {
   distill::create_website(dir = getwd(), title = name, gh_pages = TRUE)
 

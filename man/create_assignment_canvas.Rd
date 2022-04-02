@@ -16,3 +16,4 @@ create_assignment_canvas(name, number, week)
 \description{
 Internal function. Creates a new assignment for the course on Canvas.
 }
+\keyword{internal}

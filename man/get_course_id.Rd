@@ -9,3 +9,4 @@ get_course_id()
 \description{
 Internal function. Retrieves the Canvas course ID.
 }
+\keyword{internal}

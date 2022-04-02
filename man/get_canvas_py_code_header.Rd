@@ -9,3 +9,4 @@ get_canvas_py_code_header()
 \description{
 Internal function. Retrieves the header Python code for sending commands to Canvas.
 }
+\keyword{internal}

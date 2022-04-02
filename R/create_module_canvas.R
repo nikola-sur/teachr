@@ -4,6 +4,8 @@
 #'
 #' @param name See create_module()
 #' @param week See create_module()
+#'
+#' @keywords internal
 create_module_canvas <- function(name, week) {
   module_name <- paste0("Week ", week, ": ", name)
   py_code <- paste0(get_canvas_py_code_header(), "

@@ -9,3 +9,4 @@ get_canvas_token()
 \description{
 Internal function. Retrieves the Canvas token.
 }
+\keyword{internal}

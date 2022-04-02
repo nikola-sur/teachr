@@ -9,3 +9,4 @@ get_API_URL()
 \description{
 Internal function. Retrieves the Canvas API URL
 }
+\keyword{internal}

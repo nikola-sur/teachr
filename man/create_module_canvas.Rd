@@ -14,3 +14,4 @@ create_module_canvas(name, week)
 \description{
 Internal function. Creates a new module on Canvas.
 }
+\keyword{internal}

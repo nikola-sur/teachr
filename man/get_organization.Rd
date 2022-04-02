@@ -9,3 +9,4 @@ get_organization()
 \description{
 Internal function. Retrieves the Canvas token.
 }
+\keyword{internal}

@@ -12,3 +12,4 @@ create_module_lectures(week)
 \description{
 Internal function. Creates a new module in the 'lectures' repository.
 }
+\keyword{internal}

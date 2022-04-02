@@ -9,3 +9,4 @@ get_site_path()
 \description{
 Internal function. Retrieves the path to the "inst/site" folder.
 }
+\keyword{internal}

@@ -5,6 +5,8 @@
 #' @param name See create_assignment()
 #' @param number See create_assignment()
 #' @param week See create_assignment()
+#'
+#' @keywords internal
 create_assignment_canvas <- function(name, number, week) {
   slug <- paste0("hw-", number)
   assignment_url <- paste0(get_site_url(), "/assignments/", slug, "/", slug)

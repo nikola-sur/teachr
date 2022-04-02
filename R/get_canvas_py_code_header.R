@@ -1,6 +1,7 @@
 #' Retrieve the header Python code for sending commands to Canvas
 #'
 #' Internal function. Retrieves the header Python code for sending commands to Canvas.
+#' @keywords internal
 get_canvas_py_code_header <- function() {
   token <- get_canvas_token()
   course_id <- get_course_id()

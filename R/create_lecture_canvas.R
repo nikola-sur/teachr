@@ -5,6 +5,8 @@
 #' @param name See create_lecture()
 #' @param week See create_lecture()
 #' @param day See create_lecture()
+#'
+#' @keywords internal
 create_lecture_canvas <- function(name, week, day) {
   lecture_name <- paste0("Week ", week, " Day ", day, ": ", name)
   file_name <- paste0("week-", week)

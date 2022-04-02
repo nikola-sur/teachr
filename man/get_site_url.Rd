@@ -9,3 +9,4 @@ get_site_url()
 \description{
 Internal function. Retrieves the site URL.
 }
+\keyword{internal}
