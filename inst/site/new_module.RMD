@@ -15,8 +15,4 @@ knitr::opts_chunk$set(echo = FALSE)
 # Learning outcomes
 More information about this week's learning outcomes.
 
-# Lecture slides
-
-# Assignments
-
-
+# Lecture slides and assignments
