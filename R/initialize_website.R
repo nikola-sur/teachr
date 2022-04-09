@@ -4,7 +4,7 @@
 #'
 #' @param name See create_course()
 #'
-#' @keywords internal
+#' @export
 initialize_website <- function(name) {
   distill::create_website(dir = getwd(), title = name, gh_pages = TRUE)
 
