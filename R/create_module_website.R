@@ -15,6 +15,9 @@ create_module_website <- function(name, week) {
   # Overwrite post content with default 'new_module' content
   site_path <- get_site_path()
   file_path <- paste0(site_path, "/new_module.RMD")
-  file.copy(from = file_path, to = paste0("_posts/", slug, "/", slug, ".RMD"))
+  file.copy(from = file_path, to = paste0("_posts/", slug, "/", slug, ".Rmd"),
+            overwrite = TRUE)
+  print(file_path)
+  print(paste0("_posts/", slug, "/", slug, ".Rmd"))
   rmarkdown::render_site()
 }

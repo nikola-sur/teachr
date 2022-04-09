@@ -1,7 +1,10 @@
 ---
-  title: "Week 00 - Topic of the week"
+title: "Week 00 - Topic of the week"
 description: |
   More information about this week's module.
+author:
+  - name: Unknown
+date: 2022-04-08
 output:
   distill::distill_article:
     self_contained: false
