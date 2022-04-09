@@ -9,4 +9,3 @@ listing: posts
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-# Lectures
