@@ -1,5 +1,5 @@
 ---
-  title: "Week 00 Day 00: Topic of the day"
+title: "Week 00 Day 00: Topic of the day"
 subtitle: "More information about today's topic"
 output:
   xaringan::moon_reader:
