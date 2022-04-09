@@ -95,7 +95,6 @@ and complete the GitHub token setup. Then, in each of the three subfolders
 
 ```{r, eval = FALSE}
 usethis::use_git()
-usethis::use_github()
 ```
 
 to prepare the folders for use with Git. Then, add these repositories to your 

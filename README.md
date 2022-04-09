@@ -90,7 +90,6 @@ run
 
 ``` r
 usethis::use_git()
-usethis::use_github()
 ```
 
 to prepare the folders for use with Git. Then, add these repositories to

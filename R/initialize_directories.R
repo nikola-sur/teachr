@@ -26,7 +26,7 @@ initialize_directories <- function(name, organization, path) {
   }
 
   # Add meta files
-  dir.create(path = paste0(org_path, "meta/"), showWarnings = TRUE)
-  utils::write.table(organization, file = paste0(org_path, "meta/organization.txt"),
+  dir.create(path = paste0(org_path, "/meta/"), showWarnings = TRUE)
+  utils::write.table(organization, file = paste0(org_path, "/meta/organization.txt"),
                      row.names = FALSE, col.names = FALSE)
 }
