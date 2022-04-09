@@ -11,6 +11,8 @@ initialize_website <- function(name) {
   # Create pages for website
   site_path <- get_site_path()
   site_files <- list.files(path = site_path)
+  site_files <- setdiff(site_files, c("new_lecture.Rmd", "new_assignment.Rmd",
+                                      "new_module.RMD"))
   for (file in site_files) {
     file_path <- paste0(site_path, "/", file)
     file.copy(from = file_path, to = getwd(), overwrite = TRUE)
