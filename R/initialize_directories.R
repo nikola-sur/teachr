@@ -14,7 +14,9 @@ initialize_directories <- function(name, organization, path) {
   # Create organization folder
   dir.create(path = org_path, showWarnings = TRUE)
   usethis::create_project(path = org_path, open = FALSE)
-  renv::init()
+  old_wd <- getwd()
+  renv::init(project = paste0(organization, "/"))
+  setwd(old_wd)
 
   # Create repo folders
   for (repo in repos) {
