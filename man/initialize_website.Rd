@@ -12,4 +12,3 @@ initialize_website(name)
 \description{
 Internal function. Creates the website. Only run this function once.
 }
-\keyword{internal}
